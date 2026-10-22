@@ -1,4 +1,0 @@
-interface:
-  display_name: "Evidence Notes"
-  short_description: "Source cards with facts, inference and uncertainty"
-  default_prompt: "Use $evidence-notes to organize these materials into source-linked notes."

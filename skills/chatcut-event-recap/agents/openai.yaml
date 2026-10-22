@@ -1,4 +1,0 @@
-interface:
-  display_name: "ChatCut 活动回顾剪辑"
-  short_description: "Consistent event recap edits and editable project delivery"
-  default_prompt: "Use $chatcut-event-recap to plan and refine my event recap in ChatCut, preserving the approved style and checking the exported result."

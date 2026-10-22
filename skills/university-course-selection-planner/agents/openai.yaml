@@ -1,4 +1,0 @@
-interface:
-  display_name: "University Course Selection Planner"
-  short_description: "Build verified university course plans from official materials"
-  default_prompt: "Use $university-course-selection-planner to audit official course materials and produce matching text and visual timetables."

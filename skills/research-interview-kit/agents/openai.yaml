@@ -1,4 +1,0 @@
-interface:
-  display_name: "Research Interview Kit"
-  short_description: "Evidence-linked interview questions and follow-ups"
-  default_prompt: "Use $research-interview-kit to prepare a role-appropriate interview guide from my research materials."

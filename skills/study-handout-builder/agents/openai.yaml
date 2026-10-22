@@ -1,4 +1,0 @@
-interface:
-  display_name: "Study Handout Builder"
-  short_description: "Source-linked study handouts and printable PDF layouts"
-  default_prompt: "Use $study-handout-builder to prepare a verified study handout from my materials."
