@@ -26,7 +26,7 @@ The workflow does not generate exact plans during research. Missing or contradic
 Clone or copy this directory into the Skill directory supported by your Codex environment. The required entrypoint is `SKILL.md`; `agents/openai.yaml` provides optional UI metadata.
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/ywrnpwvp89-dev/study-workbench.git
 ```
 
 The exact Skill installation location is environment-specific; do not assume a global path.
@@ -34,15 +34,15 @@ The exact Skill installation location is environment-specific; do not assume a g
 ## Example prompts
 
 ```text
-Use $university-course-selection-planner-1.1.1. Ask me for my university, major, year, term, goals, and required courses, then tell me which official materials to upload. Do not generate a plan yet.
+Use $university-course-selection-planner. Ask me for my university, major, year, term, goals, and required courses, then tell me which official materials to upload. Do not generate a plan yet.
 ```
 
 ```text
-Use $university-course-selection-planner-1.1.1 after the material audit. Ask me no more than five questions about goals, required courses, time restrictions, and acceptable credit load.
+Use $university-course-selection-planner after the material audit. Ask me no more than five questions about goals, required courses, time restrictions, and acceptable credit load.
 ```
 
 ```text
-Use $university-course-selection-planner-1.1.1 to build three concrete plans. Every row must include exact code, section, credits, teacher, time/weeks, room, and enrollment remarks from authoritative sources. If I ask for a timetable, include both the text version and calendar-style visualization.
+Use $university-course-selection-planner to build three concrete plans. Every row must include exact code, section, credits, teacher, time/weeks, room, and enrollment remarks from authoritative sources. If I ask for a timetable, include both the text version and calendar-style visualization.
 ```
 
 ## Repository structure
