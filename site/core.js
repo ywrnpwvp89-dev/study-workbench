@@ -1,8 +1,9 @@
 (function(root){
  'use strict';
+ const unknownValue=v=>v==null||v===''||typeof v==='string'&&/待确认|待核实|未知/.test(v);
  function weeks(raw){
   const s=String(raw||'').replace(/周/g,'').replace(/\s/g,'');
-  if(!s)return null;
+  if(unknownValue(raw))return null;
   const odd=s.endsWith('单'),even=s.endsWith('双'),clean=s.replace(/[单双]$/,'');
   const result=new Set();
   for(const part of clean.split(/[,，、]/)){
@@ -27,7 +28,7 @@
   courses.forEach(validateCourse);let conflicts=[],unknown=[];
   const es=events(courses);
   for(const c of es){
-   for(const k of ['code','section','teacher','room','nature','eligibility','weeks','exam'])if(!c[k])unknown.push(c.name+'：'+({section:'待确认班号',weeks:'周次待确认',exam:'考试安排待确认'}[k]||k+'待确认'));
+   for(const k of ['code','section','teacher','room','nature','eligibility','weeks','exam'])if(unknownValue(c[k]))unknown.push(c.name+'：'+({section:'待确认班号',weeks:'周次待确认',exam:'考试安排待确认'}[k]||k+'待确认'));
    if(c.credit==null)unknown.push(c.name+'：学分待确认');
    if(!c.day||!c.start||!c.end)unknown.push(c.name+'：无固定时间或上课时间待确认');
   }
@@ -39,7 +40,7 @@
    }
   }
   const groups=new Map();
-  courses.forEach((c,i)=>{const key=c.code&&c.section?c.code+'/'+c.section:'unverified-'+i;if(groups.has(key)&&groups.get(key)!==c.credit)throw Error('同一代码/班号的学分不一致，请核对');groups.set(key,c.credit);});
+  courses.forEach((c,i)=>{const key=!unknownValue(c.code)&&!unknownValue(c.section)?c.code+'/'+c.section:'unverified-'+i;if(groups.has(key)&&groups.get(key)!==c.credit)throw Error('同一代码/班号的学分不一致，请核对');groups.set(key,c.credit);});
   const credits=[...groups.values()].filter(c=>c!=null);
   return {conflicts,unknown,total:credits.reduce((a,b)=>a+b,0),known:credits.length,groups:groups.size,arithmetic:credits.join(' + ')||'0'};
  }

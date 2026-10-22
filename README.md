@@ -2,6 +2,8 @@
 
 本地优先的五项工具与六个可独立安装的Skill。`site/`是无构建步骤的静态网站；`skills/`保留完整工作方法。
 
+在线入口：[知行 · 学习与工作工具箱](https://ywrnpwvp89-dev.github.io/study-workbench/)。实验数据处理请访问 [格物 · 实验数据工作台](https://ywrnpwvp89-dev.github.io/gewu-lab/)。
+
 | 工具 | 网站功能 | Skill |
 |---|---|---|
 | 讲义与打印 | 本地PDF A4双拼、页序预览、下载 | study-handout-builder |
