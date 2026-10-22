@@ -16,4 +16,7 @@ assert.throws(()=>w.validateCourse({...base,start:4,end:2}));
 assert(w.markdown([base],'课程安排').includes('待确认班号'));
 assert.equal(w.audit([{...base,code:'TEST',section:'01'},{...base,code:'TEST',section:'01',day:2}]).total,2);
 assert.throws(()=>w.audit([{...base,code:'TEST',section:'01'},{...base,code:'TEST',section:'01',credit:3}]));
+assert.equal(w.weeks('待确认'),null);
+assert(w.audit([{...base,section:'待确认班号',exam:'待核实',nature:'未知'}]).unknown.some(x=>x.includes('考试')));
+assert.equal(w.audit([{...base,code:'DEMO',section:'待确认班号'},{...base,code:'DEMO',section:'待确认班号'}]).groups,2);
 console.log('Timetable behavior checks passed, including repeated meetings');
