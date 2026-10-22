@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence Work Assistant"
+  short_description: "Trace work items to authorized chat and mail evidence"
+  default_prompt: "Use $evidence-work-assistant to collect authorized evidence and report attributable tasks with coverage limits."

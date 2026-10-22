@@ -1,0 +1,4 @@
+{
+  "coverage": {"status": "synthetic_demo", "limitations": ["虚构示例，不是真实采集结果"]},
+  "items": [{"title": "示例：核对讲义打印设置", "owner": null, "due": null, "status": "needs_confirmation", "evidence_ids": ["demo:001"], "rationale": "只演示任务JSON结构，不能输入真实提醒系统。"}]
+}
