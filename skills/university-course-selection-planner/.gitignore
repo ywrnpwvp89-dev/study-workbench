@@ -1,0 +1,16 @@
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.log
+coverage/
+dist/
+build/
+tmp/
+scratch/
+private/
+.tools/
